@@ -1,0 +1,122 @@
+Delivered-To: shreyjain6996@gmail.com
+Received: by 2002:ac9:5710:0:b0:530:f3dd:538b with SMTP id m16csp431201ocn;
+        Mon, 27 May 2024 21:08:03 -0700 (PDT)
+X-Received: by 2002:a05:6870:1605:b0:24f:ddee:3fbb with SMTP id 586e51a60fabf-24fddee3ffdmr2831797fac.3.1716869282833;
+        Mon, 27 May 2024 21:08:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1716869282; cv=none;
+        d=google.com; s=arc-20160816;
+        b=kbcjg+2rrpYUADBfWAJvfpSHYCOGSm6wgr7YYC6RAd8Dn1NipzIYcoY2Mhw2HCKj32
+         achuCnhNAraLF5DzB6Od5Bg3DS9SSo2Exd1+EbMv0JhX/lAB75lYBLccTmClqGC76BQu
+         LQFZlv6qfsmm3gIPGYanWZfEO1OhBTh7TLzQBsBDeTQ3A3/MWT2dfxDMhoOkBYgORQhh
+         AwaU5B9AfDLvVbDtsWt47C5xI2RkRuW5Csefr4S94KxXBj56X5JhNU1m7/kPk1x2TG+x
+         xtNeKINgV8tn9YNo11tB0zl8sVlPJaYcFYDfb37P/aOvN6+IcDHBo6RnQXGQ4MjZ3/mX
+         iEZg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=MZ9unWKDVTRaWv4JEqlSy4cC9uK0tLwyUDMOsKOweX0=;
+        fh=iTFqo7sbMFCbAByjae+/hwzgEzmEDzE08K9Zsh8LTOg=;
+        b=KR0fR6LYurtmkhz4CQJqe67vKhUsuaPFDfLbEFG7Km5OhiUcIcYdysrV65q+QQZCHg
+         xkCI8t/ahO4joUDJRO0bposVtyfUfWwzxEsjSTnGjAm/SX7XirWb9irvzzI2/BRGxjGh
+         obs0uO0+n/ILiC0wuXXoP/AhWan5pMvK4USCCYlDoTeR9V9Va4KX3qXJzKIGp+QiQkGH
+         471A68NDORXiz5XubXw4m3B5KfhNNXHZgPXdPnYTzogxirJadXZzJEGSTOQErqCfq15l
+         NvJC1fYoJGLJ2nLmLWzjg+Bzd7NgVQFzN32OSncWHaSYZq0zaEo6WAX7Q1aGTbAwa8tf
+         wQfQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=AeRUh5sO;
+       spf=pass (google.com: domain of chintnt.shah@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=chintnt.shah@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <chintnt.shah@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 586e51a60fabf-24c8261aa75sor4376697fac.6.2024.05.27.21.08.02
+        for <shreyjain6996@gmail.com>
+        (Google Transport Security);
+        Mon, 27 May 2024 21:08:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of chintnt.shah@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=AeRUh5sO;
+       spf=pass (google.com: domain of chintnt.shah@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=chintnt.shah@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1716869282; x=1717474082; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=MZ9unWKDVTRaWv4JEqlSy4cC9uK0tLwyUDMOsKOweX0=;
+        b=AeRUh5sORL5HP4rI529YNR1h+vL0Mx3TSYopPo/dTr/r5B8aPtWKubSBE78BI8K29n
+         10c3ILwLWsFsDOJMvBFSUO6tySlaEEy3M3ThgnYE2JGE9OFOa8EWyqInzMGymDorKeFP
+         uS0T1qhh/RxEJghRsUgDZVgv18opsV5fdbjW3R58h2gs1TjCMaKRzEf++jzzI8UDsW/q
+         B0kvyxyGHRXsK/+0YdmebQc7nOnsJBbRDrwV1dirG6b44Y7NyHbsXYJSmePt9DKClg0n
+         WusngfaJaEIQNCjzRc7bH/oPzSjoZPE/I6MFX1sxKj8+3Zu0vhXeFfMszwzzoGDpewNu
+         F/Kw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1716869282; x=1717474082;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=MZ9unWKDVTRaWv4JEqlSy4cC9uK0tLwyUDMOsKOweX0=;
+        b=mbyWo4uSro2/xzsCT/GuRAy7ZZw04xJ4wxcMQDxnrSA496aecIXuw81Qpfgd6Ig9dZ
+         3QM3BDAa+Qlyd+17MW5+heNhMp5hTqdWJvZZ/Mn5/iLHo9wQnLgV7Ohts6Cwj6qE1AE3
+         PihBEJFyoLdK9jJitSb9vRVTXUUwvr3K0T8XeDSn0An7aqmazSGoL2vwNptdwMeskGzL
+         TtiA3P8mbQolm713AIF1ooBleDHeaJonDtIX7z/mUbjQpOKXeqBI0wnkGUGpFStA9L8E
+         wFEUuCU9359Hm/okJPRVo3xYTCQurGSi6ujgVFh8t6ISg8l4e7lTOVBNlgkbtNvdE4jR
+         Ze2w==
+X-Gm-Message-State: AOJu0YzUo2ZPPPgBwZHYddkFc66yO3jNEBZho6x0+23QoW8hhn6d0FY6
+	GLSOWyjdTj2Y00JqAZMkTJIIVsRTfPzoX26gCEF1r73tpUwhlYJqPkHBp0M1qfp1rENjrxkc16O
+	E7KCm0/QAhw4K1rzZ4uUr39AkUFfc1w==
+X-Google-Smtp-Source: AGHT+IE/4wxb7BAIFH6BQBcm/pkLikuS225xE927eHUtTEJy9olMIbN9oX8L6MUxPCTqmkIgUVTHvXVxSElT/lo5f9I=
+X-Received: by 2002:a05:6870:3043:b0:24f:d6e0:b04b with SMTP id
+ 586e51a60fabf-24fd6e0dbb2mr2953016fac.22.1716869282125; Mon, 27 May 2024
+ 21:08:02 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAM93PipDBbB9keEpbQ87p6yWa0nqMEf9K5Bvt3=yic-CA0uCUg@mail.gmail.com>
+In-Reply-To: <CAM93PipDBbB9keEpbQ87p6yWa0nqMEf9K5Bvt3=yic-CA0uCUg@mail.gmail.com>
+From: Chintan Shah <chintnt.shah@gmail.com>
+Date: Tue, 28 May 2024 09:37:48 +0530
+Message-ID: <CADcOjgyfMPvNUDs5+dqRjst-FkLZketq+iC_Q_m7DbzWmzMErg@mail.gmail.com>
+Subject: Re: Upgrade your credit card
+To: Shrey Jain <shreyjain6996@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000afe17d06197bc792"
+
+--000000000000afe17d06197bc792
+Content-Type: text/plain; charset="UTF-8"
+
+I will be available tomorrow.
+
+
+On Mon, 27 May, 2024, 8:00 am Shrey Jain, <shreyjain6996@gmail.com> wrote:
+
+> Hi Chintan,
+> Now you can upgrade your credit card to unlock new benefits. Your
+> corporate card can be upgraded to our newly launched corporate grey card.
+> We would like to connect for a short discussion regarding the upgrade
+> process if you are interested. Do let us know which timing works for you
+> from the below options along with the relevant time slots:
+>
+> 1.) Today or tomorrow
+> 2.) Next week
+> 3.) Next month
+>
+> Regards,
+> Shrey Jain
+>
+
+--000000000000afe17d06197bc792
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">I will be available tomorrow.=C2=A0<div dir=3D"auto"><br>=
+</div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_=
+attr">On Mon, 27 May, 2024, 8:00 am Shrey Jain, &lt;<a href=3D"mailto:shrey=
+jain6996@gmail.com">shreyjain6996@gmail.com</a>&gt; wrote:<br></div><blockq=
+uote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc =
+solid;padding-left:1ex"><div dir=3D"ltr">Hi=C2=A0Chintan,<br><div>Now you c=
+an upgrade your credit card to unlock new benefits. Your corporate card can=
+ be upgraded to our newly=C2=A0launched corporate grey card. We would like =
+to connect for a short discussion regarding the upgrade process if you are =
+interested. Do let us know which timing works for you from the below option=
+s along with the relevant=C2=A0time slots:</div><div><br></div><div><div>1.=
+) Today or tomorrow</div><div>2.) Next week</div><div>3.) Next month</div><=
+div><br></div><div>Regards,</div><div>Shrey Jain</div></div></div>
+</blockquote></div>
+
+--000000000000afe17d06197bc792--

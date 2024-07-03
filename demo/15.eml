@@ -1,0 +1,123 @@
+Delivered-To: shreyjain6996@gmail.com
+Received: by 2002:ac9:718d:0:b0:52c:2fa5:46a7 with SMTP id q13csp10840433ocn;
+        Sun, 19 May 2024 07:59:45 -0700 (PDT)
+X-Received: by 2002:a81:ad09:0:b0:61a:d4ea:b856 with SMTP id 00721157ae682-622b013dfe1mr250113217b3.40.1716130785008;
+        Sun, 19 May 2024 07:59:45 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1716130784; cv=none;
+        d=google.com; s=arc-20160816;
+        b=uVguXOjIc4epoyzLHsWU8zcqaictSWf3xqG3Ecxlk8ehJMEJ2AvryQSyPkmckCTjJ3
+         8b7KDZkks/IusuFQAIWIqIM0KPUWVEZlie1Nm1MR4vMGbCiDS9MyFtu0U9rOSqi7InKv
+         SNKIjE+mhY1iHImDN3ETVVAvBuCz+yG5ZCVIYeSuds+OjxzfgOVJtUgYF7ka2fH2+Ie7
+         zczrTW/hqiGEktnkbGkjSiBN7bhNi1Pxot/5s+DVj0bxjYZDWdSNxvDERtMcjqteeB1X
+         N+6Lf5xF/K3KFCEprF7QHQraVVgUWcUQesghOfETncPIcYhwsSYHSipF8ccsRrdfwPXX
+         DM6A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=MXShwLg1GdYF0FMVyHtzLveDnBekv7yWORCCIw7gIgE=;
+        fh=iTFqo7sbMFCbAByjae+/hwzgEzmEDzE08K9Zsh8LTOg=;
+        b=alEaRqE/6N9Bdp6I7g3v3qZKnLbekFA3mFTl3IzCqVvW3AruiwII7hewy06haTD/I/
+         5J0w36idhcj7dLI1kfdZxrCsOab2JYSPdFKT8h6reQBF/jmbp8lednVAIpAjQGpebQD+
+         TutVv+uJDxnTbsd2rkq9BspbXbBxPKuqf/UpQyZuhYqZXfzHBCy/V3Id002BPRSnueQa
+         yWx+YsS2CsN/mzbp4D92coVaM7iE61PSNyfvBMLEcBGYGdMLH91KsnY8CnfM+KhI0mmV
+         8I11GiCH+qVHJnYKBiMIZiqcEf5thN3BhTvWB1MXWtVwYgXgmUqJ7cfddu4pLS3yWAB9
+         1fhQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KwNPtYbm;
+       spf=pass (google.com: domain of jshrey1995@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jshrey1995@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <jshrey1995@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-6209e25cf82sor147755727b3.6.2024.05.19.07.59.44
+        for <shreyjain6996@gmail.com>
+        (Google Transport Security);
+        Sun, 19 May 2024 07:59:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jshrey1995@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KwNPtYbm;
+       spf=pass (google.com: domain of jshrey1995@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jshrey1995@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1716130784; x=1716735584; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=MXShwLg1GdYF0FMVyHtzLveDnBekv7yWORCCIw7gIgE=;
+        b=KwNPtYbm8VTB7ux37WY5lvoQBzSQrBQOkKvJ1OHwh5XPp0nCr6YguvraEH862rNIoI
+         EXxLYCCsEoid74AhSRqABEs1oWn0Y9aorMDCLM2FWjdJI/8zdDIJst8Wt2ioOb/mVa8V
+         4SLlMP/w/i+2eKkVknhls3hWcm+SpUUsQndmUw5e7yAjn38NZVDkaDCxbILfwB7/jwtT
+         d1lOlwOtU+ek9UNlaf0sOssIcTKMe7KDDYpk/hj9B4TilWroTAr9raxjf3beQtKemFXA
+         EUwJFK65l8JpQEJvbDdEHXg63wUkOYmAU3yaMK4ZowVubv+AnE/jLx1w0jNw97lwnnEU
+         pG7w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1716130784; x=1716735584;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=MXShwLg1GdYF0FMVyHtzLveDnBekv7yWORCCIw7gIgE=;
+        b=ftYEEBYQT3W2wiwbUcneotj2WG8C6tc8iwe1Ar7hPxfFBFUIYaPfqnF7GZ20muqQld
+         elUBnSKjrlKYFiJ2FLxOlqTfoD1BZbqySFSMdc5S1NY7fsj1AAO96VOhalWQecTfkRl3
+         r07YdXUmobxrEKja43i3vTJarJG+avLkopWmU3AM2Q6uN/MbReVCRya0oXFFVD4iSqrO
+         2dp6Jr1u7P0PgM6OhqY2V+TzSIxTpJzM7Qxvqsi9HxbSJjJBVFIkar4Tc+RLWQFp8SJW
+         yOCTbbK0ChdDEasm9JrN/mFX63J2LPutdlAwuDlH0Rh92gji1sKCqGAvuPNkg1GATUkJ
+         /2+w==
+X-Gm-Message-State: AOJu0YyhmuImEBEk+N5LDZk1PeKgCvUqgSJjkK/Z+Jt0aeJSO2IkA1Tc
+	a9z6K3oz/+fM93ynjGKD6/qdG/DKHspaM+rB4gBEpW81OTzcAAeFpo+e/9I3VakmDJJ/1wb/Ppo
+	VmRrjYZ6L+m2WJTOJOAw2HZz3wR+PsA==
+X-Google-Smtp-Source: AGHT+IHnr5FwO8U1LxWCAvmUmIsu0o/rhYWlcB6JnlHLapDP3vixaDOv93FuvcVHSLBvuvkwqCXScAb8IH7egFZxz8g=
+X-Received: by 2002:a81:4e14:0:b0:627:7630:800a with SMTP id
+ 00721157ae682-6277630850cmr101325107b3.49.1716130784385; Sun, 19 May 2024
+ 07:59:44 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAM93Pip6pEXm3K_qor936gqHOe0H1x_M8eXA67mMHWztWGiw-A@mail.gmail.com>
+In-Reply-To: <CAM93Pip6pEXm3K_qor936gqHOe0H1x_M8eXA67mMHWztWGiw-A@mail.gmail.com>
+From: Shrey Jain <jshrey1995@gmail.com>
+Date: Sun, 19 May 2024 20:29:33 +0530
+Message-ID: <CAOuMnT4MJvLJF-7yXqZhXDQKpcwEG528FCZrb35tjXNtLkt6ug@mail.gmail.com>
+Subject: Re: Availability for call
+To: Shrey Jain <shreyjain6996@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000caa3500618cfd5b5"
+
+--000000000000caa3500618cfd5b5
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Please unsubscribe me from your mailing list. I am no longer interested.
+
+On Sat, May 11, 2024 at 11:14=E2=80=AFAM Shrey Jain <shreyjain6996@gmail.co=
+m> wrote:
+
+> Hi,
+> Would like to know your availability for a short phone call regarding our
+> newly launched American Express corporate savings credit card and its
+> potential benefits. We would like to discuss at your convenience. Kindly
+> let us know your earliest availability along with the time slot from the
+> below options.
+>
+> 1.) Today or tomorrow
+> 2.) Next week
+> 3.) Next month
+>
+> Regards,
+> Shrey Jain
+>
+
+--000000000000caa3500618cfd5b5
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Please unsubscribe=C2=A0me from your mailing list. I am no=
+ longer interested.</div><br><div class=3D"gmail_quote"><div dir=3D"ltr" cl=
+ass=3D"gmail_attr">On Sat, May 11, 2024 at 11:14=E2=80=AFAM Shrey Jain &lt;=
+<a href=3D"mailto:shreyjain6996@gmail.com">shreyjain6996@gmail.com</a>&gt; =
+wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0=
+px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=
+=3D"ltr">Hi,<div>Would like to know your availability for a short phone cal=
+l regarding our newly launched American Express corporate savings credit ca=
+rd and its potential benefits. We would like to discuss at your convenience=
+. Kindly let us know your earliest availability along with the time slot fr=
+om the below options.<br><br>1.) Today or tomorrow</div><div>2.) Next week<=
+/div><div>3.) Next month</div><div><br></div><div>Regards,</div><div>Shrey =
+Jain</div></div>
+</blockquote></div>
+
+--000000000000caa3500618cfd5b5--
